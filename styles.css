@@ -1,0 +1,68 @@
+/**
+ * 抖音IP属地助手 - 样式
+ */
+
+.dy-ip-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 3px 10px !important;
+  margin: 4px 0 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #666 !important;
+  background: linear-gradient(135deg, #f0f3ff 0%, #f5f3ff 100%) !important;
+  border: 1px solid #e0d8f0 !important;
+  border-radius: 12px !important;
+  cursor: default !important;
+  user-select: none !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+}
+
+.dy-ip-badge:hover {
+  background: linear-gradient(135deg, #e8ebff 0%, #ede8ff 100%) !important;
+  border-color: #c8b8e8 !important;
+  color: #444 !important;
+}
+
+.dy-ip-icon {
+  font-size: 13px !important;
+  line-height: 1 !important;
+}
+
+.dy-ip-text {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .dy-ip-badge {
+    color: #ccc !important;
+    background: linear-gradient(135deg, #2a2a3a 0%, #2d2a3a 100%) !important;
+    border-color: #3d3550 !important;
+  }
+
+  .dy-ip-badge:hover {
+    background: linear-gradient(135deg, #30304a 0%, #35304a 100%) !important;
+    border-color: #5d4d7a !important;
+    color: #eee !important;
+  }
+}
+
+/* 视频详情页定位动画 */
+@keyframes dyIpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dy-ip-badge {
+  animation: dyIpFadeIn 0.3s ease-out;
+}
